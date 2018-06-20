@@ -1,0 +1,865 @@
+Python 3.6 .4(v3 .6 .4: d48eceb, Dec 19 2017, 06: 54: 40)[MSC v .1900 64 bit(AMD64)] on win32
+Type "copyright", "credits"
+or "license()"
+for more information. >>>
+    RESTART: C: /Users/Shah / Documents / Shah_Rahim_Rutgers_B.S / Spring 2018 / Intro to Data Science / Project / Scraping_Code / season_09.py <
+    body >
+    <
+    header id = "header-ad" >
+    <
+    div id = "ad_bnr_atf_01" > < /div> <
+    div id = "ad_mod_92f78ded2" > < /div> <
+    /header> <
+    div class = "[ show-for-large ] turner-nav" >
+    <
+    div class = "turner-nav__inner" >
+    <
+    div class = "turner-nav__logo" >
+    <
+    a href = "http://www.nba.com" > < img alt = "NBA Logo"
+class = "turner-nav__logo-img"
+src = "/media/img/league/nba-logoman-word-white.svg"
+title = "NBA" / > < /a> <
+    /div> <
+    ul class = "turner-nav__left"
+role = "navigation" >
+    <
+    li class = "turner-nav__menu-item" > < a href = "https://stats.nba.com/scores" > < span > Scores < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://stats.nba.com/schedule/" > < span > Schedule < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://www.nba.com/news" > < span > News < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://www.nba.com/video" > < span > Video < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://www.nba.com/standings" > < span > Standings < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://stats.nba.com" > < span > Stats < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://stats.nba.com/players/" > < span > Players < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://stats.nba.com/teams/" > < span > Teams < /span></a > < /li> <
+    /ul> <
+    ul class = "turner-nav__right"
+role = "navigation" >
+    <
+    li class = "turner-nav__menu-item" > < a href = "https://www.nba.com/leaguepass"
+title = "NBA League Pass" > < span > NBA LEAGUE PASS < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "https://www.nba.com/global/storelinkhandler.html"
+title = "NBA Store" > < span > Store < /span></a > < /li> <
+    li class = "turner-nav__menu-item" > < a href = "http://nbatickets.nba.com/"
+title = "NBA Tickets" > < span > Tickets < /span></a > < /li> <
+    /ul> <
+    /div> <
+    /div> <
+    div class = "stats-subheader [ show-for-large ]" >
+    <
+    div class = "sap-flag [ show-for-sap ]" >
+    <
+    div class = "sap-flag__inner sap-flag__inner--strong" >
+    <
+    img alt = "NBA Advanced Stats site wordmark"
+class = "stats-subheader__brand-logo"
+src = "/media/img/league/nba-advanced-stats-logo.svg"
+title = "NBA Advanced Stats" >
+    <
+    a class = "sap-flag__link"
+href = "" > < img class = "sap-flag__image"
+src = "/media/img/sap_header_v5.svg" / > < /a> <
+    img alt = "Advertisement"
+border = "0"
+height = "0"
+src = "https://ad.doubleclick.net/ddm/trackimp/N69702.149455NBAMEDIAVENTURESLLC/B20614183.212428153;dc_trk_aid=412073824;dc_trk_cid=76726149;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?"
+style = "position:absolute;"
+width = "0" / >
+    <
+    script src = "https://pixel.adsafeprotected.com/rjss/st/136983/21564187/skeleton.js"
+type = "application/javascript" > < /script> <
+    noscript > < img alt = ""
+border = "0"
+height = "1"
+src = "https://pixel.adsafeprotected.com/rfw/st/136983/21564186/skeleton.gif"
+width = "1" / > < /noscript> <
+    /img></div >
+    <
+    /div> <
+    /div> <
+    main class = "stats-container" >
+    <
+    nav class = "stats-dropdown"
+ng - cloak = ""
+ng - controller = "StatsNavController"
+ng - show = "showSiteNavigation" >
+    <
+    section class = "dropdown__base" >
+    <
+    div class = "dropdown__item" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link"
+href = "/" > Stats Home < /a> <
+    /h4> <
+    /div>
+    <!-- players: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isPlayerSection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('player')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > {
+        {
+            player.name
+        }
+    } < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.player" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/"
+ng - click = "toggleNav();" > Profile < /a></li >
+    <!-- <li ng-if="player.sections.current"><a href="/player/{{ player.id }}/fantasy/" ng-click="toggleNav();">Fantasy</a></li> -->
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/traditional/"
+ng - click = "toggleNav();" > Traditional < /a></li >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/advanced/"
+ng - click = "toggleNav();" > Advanced < /a></li >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/misc/"
+ng - click = "toggleNav();" > Misc < /a></li >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/scoring/"
+ng - click = "toggleNav();" > Scoring < /a></li >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/usage/"
+ng - click = "toggleNav();" > Usage < /a></li >
+    <
+    li ng -
+    if = "player.sections.stats" > < a href = "/player/{{ player.id }}/shooting/"
+ng - click = "toggleNav();" > Shooting < /a></li >
+    <
+    li > < a href = "/player/{{ player.id }}/career/" > Career < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&gt;=2" > < a href = "/player/{{ player.id }}/boxscores/"
+ng - click = "toggleNav();" > Box Scores < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&lt;=2" > < a href = "/player/{{ player.id }}/boxscores-traditional/"
+ng - click = "toggleNav();" > Advanced Box Scores Traditional < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&lt;=2" > < a href = "/player/{{ player.id }}/boxscores-advanced/"
+ng - click = "toggleNav();" > Advanced Box Scores Advanced < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&lt;=2" > < a href = "/player/{{ player.id }}/boxscores-misc/"
+ng - click = "toggleNav();" > Advanced Box Scores Misc < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&lt;=2" > < a href = "/player/{{ player.id }}/boxscores-scoring/"
+ng - click = "toggleNav();" > Advanced Box Scores Scoring < /a></li >
+    <
+    li ng -
+    if = "player.sections.boxscores &amp;&amp; player.sections.boxscoreFlag&lt;=2" > < a href = "/player/{{ player.id }}/boxscores-usage/"
+ng - click = "toggleNav();" > Advanced Box Scores Usage < /a></li >
+    <
+    li ng -
+    if = "player.sections.tracking" > < a href = "/player/{{ player.id }}/shots-dash/"
+ng - click = "toggleNav();" > Shots Dashboard < /a></li >
+    <
+    li ng -
+    if = "player.sections.tracking" > < a href = "/player/{{ player.id }}/rebounds-dash/"
+ng - click = "toggleNav();" > Rebounds Dashboard < /a></li >
+    <
+    li ng -
+    if = "player.sections.tracking" > < a href = "/player/{{ player.id }}/passes-dash/"
+ng - click = "toggleNav();" > Passes Dashboard < /a></li >
+    <
+    li ng -
+    if = "player.sections.tracking" > < a href = "/player/{{ player.id }}/defense-dash/"
+ng - click = "toggleNav();" > Defense Dashboard < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- teams: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isTeamSection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('team')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > {
+        {
+            team.city
+        }
+    } {
+        {
+            team.name
+        }
+    } < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.team" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/team/{{ team.id }}/"
+ng - click = "toggleNav();" > Profile < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/traditional/"
+ng - click = "toggleNav();" > Traditional < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/advanced/"
+ng - click = "toggleNav();" > Advanced < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/four-factors/"
+ng - click = "toggleNav();" > Four Factors < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/misc/"
+ng - click = "toggleNav();" > Misc < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/scoring/"
+ng - click = "toggleNav();" > Scoring < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/opponent/"
+ng - click = "toggleNav();" > Opponent < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/shooting/"
+ng - click = "toggleNav();" > Shooting < /a></li >
+    <!-- lineups -->
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-traditional/"
+ng - click = "toggleNav();" > Lineups Traditional < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-advanced/"
+ng - click = "toggleNav();" > Lineups Advanced < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-four-factors/"
+ng - click = "toggleNav();" > Lineups Four Factors < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-misc/"
+ng - click = "toggleNav();" > Lineups Misc < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-scoring/"
+ng - click = "toggleNav();" > Lineups Scoring < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/lineups-opponent/"
+ng - click = "toggleNav();" > Lineups Opponent < /a></li >
+    <!-- players -->
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/players-traditional/"
+ng - click = "toggleNav();" > Players Traditional < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/players-advanced/"
+ng - click = "toggleNav();" > Players Advanced < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/players-misc/"
+ng - click = "toggleNav();" > Players Misc < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/players-scoring/"
+ng - click = "toggleNav();" > Players Scoring < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/players-usage/"
+ng - click = "toggleNav();" > Players Usage < /a></li >
+    <!-- on off court -->
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-traditional/"
+ng - click = "toggleNav();" > On / Off Court Traditional < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-advanced/"
+ng - click = "toggleNav();" > On / Off Court Advanced < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-four-factors/"
+ng - click = "toggleNav();" > On / Off Court Four Factors < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-misc/"
+ng - click = "toggleNav();" > On / Off Court Misc < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-scoring/"
+ng - click = "toggleNav();" > On / Off Court Scoring < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-opponent/"
+ng - click = "toggleNav();" > On / Off Court Opponent < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/onoffcourt-summary/"
+ng - click = "toggleNav();" > On / Off Court Summary < /a></li >
+    <!-- tracking -->
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/shots-dash/"
+ng - click = "toggleNav();" > Shots Dashboard < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/rebounds-dash/"
+ng - click = "toggleNav();" > Rebounds Dashboard < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/passes-dash/"
+ng - click = "toggleNav();" > Passes Dashboard < /a></li >
+    <!-- history -->
+    <
+    li > < a href = "/team/{{ team.id }}/boxscores/"
+ng - click = "toggleNav();" > Box Scores < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/boxscores-traditional/"
+ng - click = "toggleNav();" > Advanced Box Scores Traditional < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/boxscores-advanced/"
+ng - click = "toggleNav();" > Advanced Box Scores Advanced < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/boxscores-four-factors/"
+ng - click = "toggleNav();" > Advanced Box Scores Four Factors < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial" > < a href = "/team/{{ team.id }}/boxscores-misc/"
+ng - click = "toggleNav();" > Advanced Box Scores Misc < /a></li >
+    <
+    li ng -
+    if = "!team.isSpecial"
+s = "" > < a href = "/team/{{ team.id }}/boxscores-scoring/"
+ng - click = "toggleNav();" > Advanced Box Scores Scoring < /a></li >
+    <
+    li > < a href = "/team/{{ team.id }}/seasons/"
+ng - click = "toggleNav();" > Seasons < /a></li >
+    <
+    li > < a href = "/team/{{ team.id }}/yearoveryear/"
+ng - click = "toggleNav();" > Year Over Year < /a></li >
+    <
+    li > < a href = "/team/{{ team.id }}/franchise-leaders/"
+ng - click = "toggleNav();" > Franchise Leaders < /a></li >
+    <
+    li > < a href = "/team/{{ team.id }}/historic-roster/"
+ng - click = "toggleNav();" > Historic Roster < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- on off: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isOnOffSection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('onoff')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > On Off Court Compare < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.onoff" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/vs/"
+ng - click = "toggleNav();" > Traditional < /a></li >
+    <
+    li > < a href = "/vs/advanced/"
+ng - click = "toggleNav();" > Advanced < /a></li >
+    <
+    li > < a href = "/vs/misc/"
+ng - click = "toggleNav();" > Misc < /a></li >
+    <
+    li > < a href = "/vs/scoring/"
+ng - click = "toggleNav();" > Scoring < /a></li >
+    <
+    li > < a href = "/vs/four-factors/"
+ng - click = "toggleNav();" > Four Factors < /a></li >
+    <
+    li > < a href = "/vs/opponent/"
+ng - click = "toggleNav();" > Opponent < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- game: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isGameSection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('game')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > {
+        {
+            game.info
+        }
+    } < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.game" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/game/{{ game.id }}/" > Box Score < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/advanced/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.advancedStats" > Advanced < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/misc/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.advancedStats" > Misc < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/scoring/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.advancedStats" > Scoring < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/usage/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.advancedStats" > Usage < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/four-factors/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.advancedStats" > Four Factors < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/tracking/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.playerTracking" > Player Tracking < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/playbyplay/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.playByPlay" > Play By Play < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/shotchart/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.shotchart" > Shotchart < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/charts/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.gameCharts" > Game Charts < /a></li >
+    <
+    li > < a href = "/game/{{ game.id }}/hustle/"
+ng - click = "toggleNav();"
+ng - show = "game.sections.hustle" > Hustle < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- fantasy: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isFantasySection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('fantasy')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > Fantasy Compare < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.fantasy" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/fantasycompare/"
+ng - click = "toggleNav();" > Traditional < /a></li >
+    <
+    li > < a href = "/fantasycompare/advanced/"
+ng - click = "toggleNav();" > Advanced < /a></li >
+    <
+    li > < a href = "/fantasycompare/misc/"
+ng - click = "toggleNav();" > Misc < /a></li >
+    <
+    li > < a href = "/fantasycompare/scoring/"
+ng - click = "toggleNav();" > Scoring < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- impact: open -->
+    <
+    div class = "dropdown__category--active"
+ng - show = "isImpactSection" >
+    <
+    div class = "dropdown__item"
+ng - click = "toggleActiveMenu('impact')" >
+    <
+    h4 class = "dropdown__item-header" >
+    <
+    a class = "dropdown__item-header__link" > Impact < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /h4> <
+    /div> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isActiveMenu.impact" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/impact/{{ impact }}"
+ng - click = "toggleNav();" > Traditional < /a></li >
+    <
+    li > < a href = "/impact/advanced/{{ impact }}"
+ng - click = "toggleNav();" > Advanced < /a></li >
+    <
+    li > < a href = "/impact/misc/{{ impact }}"
+ng - click = "toggleNav();" > Misc < /a></li >
+    <
+    li > < a href = "/impact/scoring/{{ impact }}"
+ng - click = "toggleNav();" > Scoring < /a></li >
+    <
+    li > < a href = "/impact/four-factors/{{ impact }}"
+ng - click = "toggleNav();" > Four Factors < /a></li >
+    <!-- <li><a href="/impact/opponent/{{ impact }}" ng-click="toggleNav();">Opponent</a></li> -->
+    <!-- <li><a href="/impact/usage/{{ impact }}" ng-click="toggleNav();">Usage</a></li> -->
+    <
+    li > < a href = "/impact/defense/{{ impact }}"
+ng - click = "toggleNav();" > Defense < /a></li >
+    <
+    /ul> <
+    /section> <
+    div class = "stats-dropdown__level--base__top" > < /div>
+    <!-- players -->
+    <
+    div class = "dropdown__item"
+ng - class = "{'dropdown__item--active':isCat.players}"
+ng - click = "toggleCat('players')" >
+    <
+    h4 class = "dropdown__item-header" > Players < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /h4> <
+    /div>
+    <!-- players - category -->
+    <
+    section class = "dropdown__category"
+ng - show = "isCat.players" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/players/" > Players Home < /a></li >
+    <
+    li > < a href = "/players/list/" > Player Index < /a></li >
+    <
+    li > < a href = "/players/traditional/" > Traditional Stats < /a></li >
+    <
+    li > < a href = "/leaders/" > Regular Season Leaders < /a></li >
+    <
+    li ng -
+    if = "flags.isHustleMenuActive" > < a href = "/players/hustle-leaders/" > Hustle Leaders < /a></li >
+    <
+    li > < a href = "/players/advanced-leaders/" > Advanced Leaders < /a></li >
+    <!-- <li><a href="/players/hustle-leaders/">Hustle Leaders</a></li> -->
+    <
+    li > < a href = "/alltime-leaders/" > All Time Leaders < /a></li >
+    <!-- players / general -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.general}"
+ng - click = "toggleSub(isPlayersSub, 'general')" >
+    <
+    a class = "dropdown__item-header" > General < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.general" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/traditional/" > Traditional < /a></li >
+    <
+    li > < a href = "/players/advanced/" > Advanced < /a></li >
+    <
+    li > < a href = "/players/misc/" > Misc < /a></li >
+    <
+    li > < a href = "/players/scoring/" > Scoring < /a></li >
+    <
+    li > < a href = "/players/usage/" > Usage < /a></li >
+    <
+    li > < a href = "/players/opponent/" > Opponent < /a></li >
+    <
+    li > < a href = "/players/defense/" > Defense < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- players / clutch -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.clutch}"
+ng - click = "toggleSub(isPlayersSub, 'clutch')" >
+    <
+    a class = "dropdown__item-header" > Clutch < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.clutch" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/clutch-traditional/" > Clutch Traditional < /a></li >
+    <
+    li > < a href = "/players/clutch-advanced/" > Clutch Advanced < /a></li >
+    <
+    li > < a href = "/players/clutch-misc/" > Clutch Misc < /a></li >
+    <
+    li > < a href = "/players/clutch-scoring/" > Clutch Scoring < /a></li >
+    <
+    li > < a href = "/players/clutch-usage/" > Clutch Usage < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- players / defense -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.defense}"
+ng - click = "toggleSub(isPlayersSub, 'defense')" >
+    <
+    a class = "dropdown__item-header" > Defense < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.defense" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/defense/" > Defense Overall < /a></li >
+    <
+    li > < a href = "/players/defense-dash-overall/" > Defending Shots Overall < /a></li >
+    <
+    li > < a href = "/players/defense-dash-3pt/" > Defending 3 Pointers < /a></li >
+    <
+    li > < a href = "/players/defense-dash-2pt/" > Defending 2 Pointers < /a></li >
+    <
+    li > < a href = "/players/defense-dash-lt6/" > Defending Less Than 6 FT < /a></li >
+    <
+    li > < a href = "/players/defense-dash-lt10/" > Defending Less Than 10 FT < /a></li >
+    <
+    li > < a href = "/players/defense-dash-gt15/" > Defending More Than 15 FT < /a></li >
+    <
+    li > < a href = "/players/opponent-shooting/" > Opponent Shooting < /a></li >
+    <
+    li > < a href = "/players/isolation/?OD=defensive" > By Play Type < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- players / playtype -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.playtype}"
+ng - click = "toggleSub(isPlayersSub, 'playtype')" >
+    <
+    a class = "dropdown__item-header" > Play Type < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.playtype" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/transition/" > Transition < /a></li >
+    <
+    li > < a href = "/players/isolation/" > Isolation < /a></li >
+    <
+    li > < a href = "/players/ball-handler/" > Ball Handler < /a></li >
+    <
+    li > < a href = "/players/roll-man/" > Roll Man < /a></li >
+    <
+    li > < a href = "/players/playtype-post-up/" > Post Up < /a></li >
+    <
+    li > < a href = "/players/spot-up/" > Spot Up < /a></li >
+    <
+    li > < a href = "/players/hand-off/" > Hand Off < /a></li >
+    <
+    li > < a href = "/players/cut/" > Cut < /a></li >
+    <
+    li > < a href = "/players/off-screen/" > Off Screen < /a></li >
+    <
+    li > < a href = "/players/putbacks/" > Put Backs < /a></li >
+    <
+    li > < a href = "/players/playtype-misc/" > Misc < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- players / tracking -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.tracking}"
+ng - click = "toggleSub(isPlayersSub, 'tracking')" >
+    <
+    a class = "dropdown__item-header" > Tracking < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.tracking" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/catch-shoot/" > Catch & amp;
+Shoot < /a></li >
+    <
+    li > < a href = "/players/defensive-impact/" > Defensive Impact < /a></li >
+    <
+    li > < a href = "/players/drives/" > Drives < /a></li >
+    <
+    li > < a href = "/players/passing/" > Passing < /a></li >
+    <
+    li > < a href = "/players/touches/" > Touches < /a></li >
+    <
+    li > < a href = "/players/pullup/" > Pull Up Shooting < /a></li >
+    <
+    li > < a href = "/players/rebounding/" > Rebounding < /a></li >
+    <
+    li > < a href = "/players/offensive-rebounding/" > Offensive Rebounding < /a></li >
+    <
+    li > < a href = "/players/defensive-rebounding/" > Defensive Rebounding < /a></li >
+    <
+    li > < a href = "/players/shooting-efficiency/" > Shooting Efficiency < /a></li >
+    <
+    li > < a href = "/players/speed-distance/" > Speed & amp;
+Distance < /a></li >
+    <
+    li > < a href = "/players/elbow-touch/" > Elbow Touches < /a></li >
+    <
+    li > < a href = "/players/tracking-post-ups/" > Post Ups < /a></li >
+    <
+    li > < a href = "/players/paint-touch/" > Paint Touches < /a></li >
+    <
+    /ul> <
+    /section>
+    <!-- players / shots -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.shots}"
+ng - click = "toggleSub(isPlayersSub, 'shots')" >
+    <
+    a class = "dropdown__item-header" > Shooting < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.shots" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/shots-general/" > Shots by General Range < /a></li >
+    <
+    li > < a href = "/players/shots-shotclock/" > Shots by Shotclock < /a></li >
+    <
+    li > < a href = "/players/shots-dribbles/" > Shots by Dribbles < /a></li >
+    <
+    li > < a href = "/players/shots-touch-time/" > Shots by Touch Time < /a></li >
+    <
+    li > < a href = "/players/shots-closest-defender/" > Shots by Closest Defender < /a></li >
+    <
+    li > < a href = "/players/shots-closest-defender-10/" > Shots by Closest Defender(+10 FT) < /a></li >
+    <
+    li > < a href = "/players/shooting/" > Shooting < /a></li >
+    <
+    li > < a href = "/players/opponent-shooting/" > Opponent Shooting < /a></li >
+    <
+    /ul> <
+    /section> <
+    li > < a href = "/players/hustle/" > Hustle Stats < /a></li >
+    <
+    li > < a href = "/players/bio/" > Bios < /a></li >
+    <
+    li > < a href = "/players/boxscores/" > Box Scores < /a></li >
+    <!-- players / advanced game logs -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isPlayersSub.advboxscores}"
+ng - click = "toggleSub(isPlayersSub, 'advboxscores')" >
+    <
+    a class = "dropdown__item-header" > Advanced Box Scores < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isPlayersSub.advboxscores" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li > < a href = "/players/boxscores-traditional/" > Traditional < /a></li >
+    <
+    li > < a href = "/players/boxscores-advanced/" > Advanced < /a></li >
+    <
+    li > < a href = "/players/boxscores-misc/" > Misc < /a></li >
+    <
+    li > < a href = "/players/boxscores-scoring/" > Scoring < /a></li >
+    <
+    li > < a href = "/players/boxscores-usage/" > Usage < /a></li >
+    <
+    /ul> <
+    /section> <
+    /ul> <
+    /section>
+    <!-- teams -->
+    <
+    div class = "dropdown__item"
+ng - class = "{'dropdown__item--active':isCat.teams}"
+ng - click = "toggleCat('teams')" >
+    <
+    h4 class = "dropdown__item-header" > Teams < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /h4> <
+    /div> <
+    section class = "dropdown__category"
+ng - show = "isCat.teams" >
+    <
+    ul class = "dropdown__category-list" >
+    <
+    li > < a href = "/teams/" > Teams Home < /a></li >
+    <!-- teams / general -->
+    <
+    li class = "dropdown__item"
+ng - class = "{'dropdown__item--active': isTeamsSub.list}"
+ng - click = "toggleSub(isTeamsSub, 'list')" >
+    <
+    a class = "dropdown__item-header" > All Teams < i aria - hidden = "true"
+class = "dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" > < /i><i aria-hidden="true" class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]"></i > < /a> <
+    /li> <
+    section class = "dropdown__subcategory"
+ng - show = "isTeamsSub.list" >
+    <
+    ul class = "dropdown__subcategory-list" >
+    <
+    li ng - repeat = "t in teams" > < a href = "/team/{{ t.id }}/" > < /a>{{ t.city }} {{ t.name }}</li > < /ul></section > < /ul></section > < /section></nav > < /main></body >
+    0 >>>

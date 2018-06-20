@@ -1,0 +1,21 @@
+h1{
+	color: rgba(0,200,100,0.8);
+	border-color: purple;
+	border-width: 5px;
+	border-style: solid;
+}
+
+li{
+	color:orange;
+}
+
+h3{
+	background:rgb(255,100,50);
+}
+
+body{
+	background: url(https://target.scene7.com/is/image/Target/51444339?wid=520&hei=520&fmt=pjpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*background: pink;
+}*/

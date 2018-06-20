@@ -1,0 +1,34 @@
+-headings--><h1>,<h2>
+-paragraphs---><p>
+-difference between elements and attributes
+-images---><img=>
+-unordered, ordered lists--><ul>,<ol>
+-links---><a>
+-basic understanding of div and span tags
+-table,thead,th,tr,tbody---> <table>,<tr>,<td>,<thead>,<tbody>,<th>
+-image width--><img width="">
+-form tag for all inputs--><form action="" method="">
+-input type tag--><input type="">
+-button tag--><button>
+-place holder attribute--><input type="" placeholder="">
+-action-->where the form send data to
+-method-->what HTTP method (get/post)
+-name attribute for data sent--><input name="" type="" placeholder="">
+-label tag for labeling things--><label>Username: <input name="" type="" placeholder=""></label>
+-required attribute for requiring input--><label>Username: <input name="" type="" placeholder="" required></label>
+-radio button--><input type ="radio">
+-drop-down menu--><select>
+-options for dropdown--><select> <option></option> </select>
+-name for dropdown selection--><select name = "">
+-large text box--><textarea rows="" columns=""></textarea>
+
+CSS:
+-elemtent selector--> <select type="text/css"> h1{}</select>
+-link tag for connecting css files--><link rel="stylesheet" type="text/css" href="app.css">
+-hexadecimal colors--> h1{color:FF0000;}
+-rgb colors--> h1{color:rgb(255,33,34);}
+-rgba colors--> h1{color:rgba(255,33,34,.6);}
+-url property to set background as an image-->url(https://..)
+-url make image not repeat-->backgroud-repeat: no-repeat;
+-url make image stretch to fill-->background-size:cover;
+-for borders, need color,width,style-->border-color:red,border-width:5px,border-style: solid
